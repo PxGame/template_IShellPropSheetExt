@@ -1,0 +1,32 @@
+// DlgPage.idl : DlgPage 的 IDL 源
+//
+
+// 此文件将由 MIDL 工具处理以
+// 产生类型库(DlgPage.tlb)和封送处理代码。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(E274E943-FA1E-4D6D-B748-A379B2857AE8),
+	pointer_default(unique)
+]
+interface ICDlgPageExt : IUnknown{
+};
+[
+	uuid(9752FED7-8C54-4D5C-9C2E-59156097070B),
+	version(1.0),
+]
+library DlgPageLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(54BE5184-2212-4D34-829A-6ABDF8CA8EB3)		
+	]
+	coclass CDlgPageExt
+	{
+		[default] interface ICDlgPageExt;
+	};
+};
+

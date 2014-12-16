@@ -1,0 +1,25 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {54BE5184-2212-4D34-829A-6ABDF8CA8EB3} = s 'CDlgPageExt Class'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{9752FED7-8C54-4D5C-9C2E-59156097070B}'
+			Version = s '1.0'
+		}
+	}
+	NoRemove *
+    {
+        NoRemove shellex
+        {
+            NoRemove PropertySheetHandlers
+            {
+                {54BE5184-2212-4D34-829A-6ABDF8CA8EB3} = s 'CDlgPageExt Class'
+            }
+        }
+    }
+}
